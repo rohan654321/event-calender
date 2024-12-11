@@ -1,0 +1,124 @@
+.event-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 400px;
+    max-width: 90%;
+  }
+  
+  /* Header */
+  h2 {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  /* Form container */
+  .event-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .save-button,
+  .cancel-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .save-button {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .cancel-button {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .save-button:hover {
+    background-color: #218838;
+  }
+  
+  .cancel-button:hover {
+    background-color: #c82333;
+  }
+  
+  /* Mobile view */
+  @media (max-width: 768px) {
+    .modal-content {
+      width: 90%; /* Full width with padding */
+      padding: 15px; /* Reduced padding */
+    }
+  
+    h2 {
+      font-size: 1.5rem; /* Adjust header size */
+    }
+  
+    .form-group {
+      margin-bottom: 10px; /* Reduced margin */
+    }
+  
+    input,
+    textarea {
+      padding: 6px; /* Adjust padding for inputs */
+      font-size: 0.9rem; /* Smaller font size for better fit */
+    }
+  
+    .form-buttons {
+      flex-direction: column; /* Stack buttons vertically */
+      gap: 10px; /* Space between buttons */
+    }
+  
+    .save-button,
+    .cancel-button {
+      width: 100%; /* Full width buttons */
+      padding: 10px; /* Adjust button padding */
+      font-size: 0.9rem; /* Smaller font size for buttons */
+    }
+  }
+  

@@ -1,0 +1,132 @@
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f0f4f8; /* Light background */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .month-title {
+    text-align: center;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    width: 100%;
+  }
+  
+  .day-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 4px;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border: 1px solid transparent;
+  }
+  
+  .day-card:hover {
+    background-color: #e8eaf6; /* Light hover effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .today {
+    background-color: red;
+    border: 2px solid #3f51b5; /* Highlight today's date */
+    box-shadow: 0 4px 8px rgba(63, 81, 181, 0.3);
+  }
+  
+  .day-card.selected {
+    background-color: #3f51b5;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(63, 81, 181, 0.4);
+  }
+
+  .day-card.past {
+    background-color: #ffffff;
+    color: #3f51b5;
+    box-shadow: 0 4px 8px rgba(63, 81, 181, 0.4);
+  }
+  
+  .day-number {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .weekend {
+    color: #d32f2f; /* Red color for weekends */
+  }
+  
+  .event-list {
+    margin-top: 0.5rem;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .event-item {
+    font-size: 0.9rem;
+    color: #3f51b5; /* Blue color for events */
+    font-weight: 400;
+  }
+  
+  /* Mobile view */
+  @media (max-width: 768px) {
+    .calendar-container {
+      padding: 0.5rem; /* Adjust padding for smaller screens */
+    }
+  
+    .calendar-header {
+      flex-direction: column; /* Stack header items vertically */
+      align-items: center; /* Center the header items */
+      gap: 0.5rem; /* Add some space between items */
+    }
+  
+    .month-title {
+      font-size: 1.5rem; /* Reduce font size */
+    }
+  
+    .calendar-grid {
+      grid-template-columns: repeat(7, 1fr); /* Keep 7 columns */
+      gap: 4px; /* Reduce gap between days */
+    }
+  
+    .day-card {
+      padding: 0.3rem; /* Adjust padding */
+      font-size: 1rem; /* Adjust font size */
+    }
+  
+    .day-number {
+      font-size: 1rem; /* Adjust number size */
+    }
+  
+    .event-list {
+      margin-top: 1rem; /* Add space between calendar and events */
+    }
+  
+    .event-item {
+      font-size: 0.8rem; /* Reduce event font size */
+    }
+  
+    .weekend {
+      font-size: 1rem; /* Adjust weekend font size */
+    }
+  }
+  
